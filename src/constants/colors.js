@@ -1,9 +1,12 @@
 export const COLORS = {
     NEUTRAL: {
-        10: "#FFFFFF",
-        40: "#E0E0E0",
-        90: "#404040",
-        100: "#1D1F20",
+        _10: "#FFFFFF",
+        _30: "#EDEDED",
+        _40: "#E0E0E0",
+        _70: "#757575",
+        _90: "#404040",
+        _100: "#1D1F20",
+        _333: "#333333",
         BORDER: "#EDEDED",
     },
     PRIMARY: {
