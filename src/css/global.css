@@ -1,4 +1,12 @@
 html,
 body {
+    margin: 0;
     font-family: "Nunito Sans", sans-serif;
+}
+
+section.main {
+    padding: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
 }

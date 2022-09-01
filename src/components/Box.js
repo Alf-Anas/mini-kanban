@@ -15,7 +15,6 @@ const StyledBox = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 8px;
     border-radius: 4px;
 
     background: ${({ color }) => {

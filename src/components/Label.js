@@ -12,6 +12,7 @@ const StyledLabel = styled.p`
     box-sizing: border-box;
     padding: 2px 8px;
     height: 24px;
+    margin: 0;
     width: max-content;
     background: ${({ color }) => {
         let hexColor = "";
