@@ -67,23 +67,14 @@ const StyledButton = styled.button`
     align-items: center;
 
     &:hover {
-        background-color: ${({ color }) => {
-            let hexColor = "";
-            switch (color) {
-                case BUTTON_COLOR.PRIMARY:
-                    hexColor = COLORS.PRIMARY.MAIN + "aa";
-                    break;
-                case BUTTON_COLOR.DANGER:
-                    hexColor = COLORS.DANGER.MAIN + "aa";
-                    break;
-                default:
-                    hexColor = COLORS.NEUTRAL._10 + "aa";
-            }
-            return hexColor;
-        }};
+        filter: brightness(95%);
     }
 `;
 
-export default function Button(props) {
-    return <StyledButton {...props} />;
+export default function Button({ color, children, onClick = () => {} }) {
+    return (
+        <StyledButton color={color} onClick={onClick}>
+            {children}
+        </StyledButton>
+    );
 }

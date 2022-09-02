@@ -11,11 +11,12 @@ export const BOX_COLOR = {
 const StyledBox = styled.div`
     box-sizing: border-box;
     padding: 16px;
-    width: max-content;
+    min-width: 326px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     border-radius: 4px;
+    gap: 8px;
 
     background: ${({ color }) => {
         let hexColor = "";
@@ -69,10 +70,6 @@ const StyledBox = styled.div`
         }
         return hexColor;
     }};
-
-    flex: none;
-    order: 0;
-    flex-grow: 1;
 `;
 
 export default function Box(props) {

@@ -6,7 +6,30 @@ body {
 
 section.main {
     padding: 24px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
+    display: grid;
+    grid-gap: 16px;
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+        grid-template-columns: auto;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .main {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1366px) {
+    .main {
+        grid-template-columns: auto auto auto;
+    }
+}
+
+@media screen and (min-width: 1367px) {
+    .main {
+        grid-template-columns: auto auto auto auto;
+    }
 }

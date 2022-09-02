@@ -9,6 +9,7 @@ const StyledInputLabel = styled.p`
     font-weight: 700;
     font-size: 12px;
     line-height: 20px;
+    margin: 0 0 8px 0;
 
     color: ${COLORS.NEUTRAL._90};
 `;
