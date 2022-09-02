@@ -21,8 +21,8 @@ host.interceptors.request.use(
 const API = {
     signUp: () => {
         const rawData = {
-            name: "Anas",
-            email: "anas@dummymail.com",
+            name: "MiniKanban",
+            email: "minikanban@dummymail.com",
             password: "12345678",
             password_confirmation: "12345678",
         };
