@@ -4,7 +4,7 @@ import Home from "./views/Home";
 
 export default function App() {
     return (
-        <BrowserRouter basename="/v1">
+        <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="*" element={<Component />} />
