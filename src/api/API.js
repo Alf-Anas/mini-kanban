@@ -49,7 +49,7 @@ const API = {
         return host.post("/todos/" + id + "/items", rawData);
     },
 
-    patchUpdateItem: (id = "", name = "", targetID = "") => {
+    patchUpdateItem: (id = "", targetID = "", name = "") => {
         const rawData = {
             target_todo_id: targetID,
             name: name,

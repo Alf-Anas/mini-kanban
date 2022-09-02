@@ -7,7 +7,7 @@ import ModalBody from "../../components/ModalBody";
 import ModalContent from "../../components/ModalContent";
 import ModalFooter from "../../components/ModalFooter";
 
-export default function ModalAddNewGroup({ show = false, onHideModal = () => {} }) {
+export default function ModalAddNewGroup({ show = false, onHideModal = () => {}, setStateReload }) {
     const [newGroup, setNewGroup] = useState({ title: "", description: "" });
 
     function createToDo() {
@@ -20,6 +20,7 @@ export default function ModalAddNewGroup({ show = false, onHideModal = () => {} 
                 alert(newGroup.title + " Group Created!");
                 setNewGroup({ title: "", description: "" });
                 onHideModal(false);
+                if (setStateReload) setStateReload(new Date().getTime());
             })
             .catch((err) => {
                 alert(err);

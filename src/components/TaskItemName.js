@@ -1,16 +1,17 @@
 import styled from "styled-components";
 import { COLORS } from "../constants/colors";
 
-const StyledModalContent = styled.div`
-    padding: 0 24px;
+const StyledTaskItemName = styled.p`
     font-family: "Nunito Sans";
     font-style: normal;
-    font-weight: 400;
+    font-weight: 700;
     font-size: 14px;
     line-height: 24px;
+    margin: 0;
+
     color: ${COLORS.NEUTRAL._90};
 `;
 
-export default function ModalContent({ children }) {
-    return <StyledModalContent>{children}</StyledModalContent>;
+export default function TaskItemName({ children }) {
+    return <StyledTaskItemName>{children}</StyledTaskItemName>;
 }

@@ -12,7 +12,7 @@ const StyledMenuItem = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 0px 16px;
+    padding: 6px 16px;
     gap: 16px;
     flex: none;
     order: 0;
@@ -45,17 +45,19 @@ const StyledMenuItemText = styled.p`
     font-weight: 600;
     font-size: 14px;
     line-height: 24px;
+    text-align: start;
     letter-spacing: 0.2px;
     flex: none;
     order: 0;
     flex-grow: 1;
+    margin: 0;
 `;
 
-export default function MenuItem(props) {
+export default function MenuItem({ color, icon, children, onClick = () => {} }) {
     return (
-        <StyledMenuItem {...props}>
-            {props.icon}
-            <StyledMenuItemText {...props}>{props.children}</StyledMenuItemText>
+        <StyledMenuItem color={color} onClick={onClick}>
+            {icon}
+            <StyledMenuItemText>{children}</StyledMenuItemText>
         </StyledMenuItem>
     );
 }

@@ -17,6 +17,7 @@ const StyledBox = styled.div`
     align-items: flex-start;
     border-radius: 4px;
     gap: 8px;
+    height: fit-content;
 
     background: ${({ color }) => {
         let hexColor = "";
@@ -72,6 +73,10 @@ const StyledBox = styled.div`
     }};
 `;
 
-export default function Box(props) {
-    return <StyledBox {...props} />;
+export default function Box({ color, children, onDrop = () => {} }) {
+    return (
+        <StyledBox onDrop={onDrop} color={color}>
+            {children}
+        </StyledBox>
+    );
 }

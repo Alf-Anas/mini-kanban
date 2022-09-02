@@ -12,24 +12,24 @@ section.main {
 
 @media screen and (max-width: 768px) {
     .main {
-        grid-template-columns: auto;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
     }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     .main {
-        grid-template-columns: auto auto;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1366px) {
     .main {
-        grid-template-columns: auto auto auto;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
 
 @media screen and (min-width: 1367px) {
     .main {
-        grid-template-columns: auto auto auto auto;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 }

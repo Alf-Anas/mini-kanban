@@ -70,21 +70,21 @@ const StyledProgressText = styled.p`
     color: ${COLORS.NEUTRAL._70};
 `;
 
-export default function ProgressBar(props) {
+export default function ProgressBar({ progress = 0 }) {
     return (
         <StyledProgressBar>
             <StyledProgress>
                 <StyledProgressBackground>
-                    <StyledProgressForeground progress={props.progress} />
+                    <StyledProgressForeground progress={progress} />
                 </StyledProgressBackground>
             </StyledProgress>
             <StyledProgressText>
-                {props.progress === -1 ? (
-                    <FaRegTimesCircle color={COLORS.DANGER.MAIN} />
-                ) : props.progress === 100 ? (
-                    <FaRegCheckCircle color={COLORS.SUCCESS.MAIN} />
+                {progress === -1 ? (
+                    <FaRegTimesCircle size={16} color={COLORS.DANGER.MAIN} />
+                ) : progress === 100 ? (
+                    <FaRegCheckCircle size={16} color={COLORS.SUCCESS.MAIN} />
                 ) : (
-                    props.progress + "%"
+                    progress + "%"
                 )}
             </StyledProgressText>
         </StyledProgressBar>
