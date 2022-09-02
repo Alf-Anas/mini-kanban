@@ -1,14 +1,13 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Component from "./views/Component";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import Home from "./views/Home";
 
 export default function App() {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="*" element={<Component />} />
+                <Route path="*" element={<h1>Not Found</h1>} />
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     );
 }
