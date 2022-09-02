@@ -75,7 +75,10 @@ export default function Home() {
     }, [tokenLoad, reload]);
 
     useEffect(() => {
-        if (listGroup.length === 0) return;
+        if (listGroup.length === 0) {
+            setIsLoading(false);
+            return;
+        }
 
         async function loadData(item) {
             return new Promise((resolve, reject) => {
